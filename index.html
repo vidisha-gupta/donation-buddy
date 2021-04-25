@@ -12,13 +12,25 @@
 <body>
     <form style="padding:1%;">
         zip: <input type="text" name="zipcode" id="zipcode" value=""> <a href="#" onclick="sendRequest()">Go</a>
+
+        <p>Features</p>
+        <input type="checkbox" name="blood" id="blood" value="blood" onclick="bloodRequest()">
+        <label for="blood">Blood</label><br>
+        <input type="checkbox" id="clothes" name="clothes" value="clothes" onclick="clothesRequest()">
+        <label for="clothes">Clothes</label><br>
+        <input type="checkbox" id="food banks" name="food banks" value="food banks" onclick="foodRequest()">
+        <label for="food banks">Food banks</label><br>
+        <input type="checkbox" id="essential products" name="essential products" value="essential products" onclick="essentialRequest()">
+        <label for="essential products">Essential products</label><br>
+
     </form>
     <div id="map"></div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8xuTe2-OqaE-rtsAcoVkvIlBX9ZJWNGU&callback=initMap&libraries=&v=weekly"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8xuTe2-OqaE-rtsAcoVkvIlBX9ZJWNGU&callback=initMap&libraries=places"
         async></script>
+
 </body>
 
 </html>
